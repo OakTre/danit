@@ -20,9 +20,7 @@ export const sassBuild = () => (
       includePaths: ['node_modules'],
     }))
     .pipe(gulpif(config.isProd, gcmq()))
-    .pipe(gulpif(config.isProd, autoprefixer({
-      cascade: false
-    })))
+    .pipe(gulpif(config.isProd, autoprefixer()))
     .pipe(gulpif(config.isProd, cleanCSS({ level: 2 })))
     .pipe(rename({
       suffix: '.min',

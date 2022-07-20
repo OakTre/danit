@@ -14,6 +14,7 @@ const config = {
     iconsMulti: `${srcPath}/assets/icons/multi`,
     backendJs: `${srcPath}/assets/js`,
     pug: `${srcPath}/pug`,
+    files: `${srcPath}/assets/files`,
   },
 
   dest: {
@@ -26,6 +27,7 @@ const config = {
     icons: `${destPath}/assets/images/icons`,
     backendJs: `${destPath}/assets/js`,
     favicon: `${destPath}/assets/favicon`,
+    files: `${destPath}/assets/files`,
   },
 
   setEnv() {
