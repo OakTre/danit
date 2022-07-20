@@ -1,9 +1,17 @@
 @font-face {
-	font-weight: 400;
-	font-family: "Roboto";
-	font-style: normal;
-	font-display: swap;
-	src:
-		url("../fonts/roboto-regular.woff2") format("woff2"),
-		url("../fonts/roboto-regular.woff") format("woff");
+  font-weight: 500;
+  font-family: "Roboto";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ArtegraSansExMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Roboto";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ArtegraSansExBold.woff2") format("woff2");
 }

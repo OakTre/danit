@@ -7,15 +7,15 @@ doctype html
 html(lang=siteLang)
   head
     include ../parts/head.pug
-  body(class=bodyClass)
-    .page-wrapper
+  body._rus(class=bodyClass)
+    .page-wrapper._rus
       block header
         include ../parts/header.pug
 
       block content
 
       block footer
-        include ../parts/footer.pug
+        include ../parts/footer_rus.pug
 
     //- .modal
     //-   include ../parts/modals/modal.pug

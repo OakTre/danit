@@ -8,12 +8,40 @@
 html {
   font-size: 10px;
   line-height: 1.2;
+
+  @include mq(custom, min, 1999) {
+    font-size: 16px;
+  }
+
+  @include mq(custom, max, 1536) {
+    font-size: 8px;
+  }
+
+  @include mq(custom, max, 1366) {
+    font-size: 7px;
+  }
+
+  @include mq(custom, max, 992) {
+    font-size: 6px;
+  }
+
+  @include mq(sm) {
+    font-size: 10px;
+  }
+
+  @include mq(custom, max, 360) {
+    font-size: 9px;
+  }
 }
 
 body {
-  color: var(--color-dark);
+  color: var(--color-white);
   font-family: var(--main-ff);
   background-color: var(--color-bg);
+
+  &._rus {
+    background: radial-gradient(187.6% 187.6% at 50% 50%, #52A863 0%, #000000 100%);
+  }
 }
 
 ul,
@@ -162,6 +190,10 @@ select:-webkit-autofill:focus {
   max-width: 1470px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include mq(custom, min, 1999) {
+    max-width: 100%;
+  }
 }
 
 .page-wrapper {
@@ -169,9 +201,19 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+  background-image: url(../images/bg-layer.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &._rus {
+    background-image: none;
+  }
 }
 
 .page-main {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
@@ -191,4 +233,3 @@ select:-webkit-autofill:focus {
 button:focus {
   box-shadow: 0 0 0 10px red;
 }
-

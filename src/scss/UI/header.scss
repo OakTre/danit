@@ -1,19 +1,24 @@
 .header {
-  padding-top: 2rem;
+  padding-top: 7.5rem;
 
-  .site-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  @include mq(sm) {
+    padding-top: 3.7rem;
   }
 
-  a {
-    display: block;
-    flex-shrink: 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    img {
-      max-width: 6rem;
-      height: 3.3rem;
+  &__logo {
+    display: flex;
+    width: 31.2rem;
+    height: auto;
+    margin-bottom: 2rem;
+
+    @include mq(sm) {
+      width: 13.2rem;
     }
   }
 }

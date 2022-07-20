@@ -1,12 +1,12 @@
 :root {
-	// Typography
-	--main-ff: "Roboto", sans-serif;
-	--second-ff: "Roboto", sans-serif;
+  // Typography
+  --main-ff: "Roboto", sans-serif;
 
-	// colors
-	--color-dark: #333;
-	--color-bg: #fafcfe;
-	--color-white: #fff;
+  // colors
+  --color-dark: #313131;
+  --color-bg: var(--color-dark);
+  --color-white: #fff;
+  --color-green: #52A863;
 }
 
 @import "./helpers/**/*";
