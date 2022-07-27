@@ -1,23 +1,24 @@
 .button {
-  padding: 1.8rem 6.5rem;
+  padding: 1.8rem 6.3rem;
   background-color: var(--color-green);
   color: var(--color-white);
-  font: 500 1.6rem/2.3rem var(--main-ff);
+  font: var(--font-s);
   text-transform: uppercase;
   clip-path: polygon(0 0, 100% 0%, 93% 100%, 0% 100%);
-  transition: background-color 200ms, color 200ms;
+  transition: background-color var(--transition), color var(--transition);
 
-  &:hover {
+  &.mod-white {
     background-color: var(--color-white);
-    color: var(--color-green);
-  }
-
-  &._dark {
-    background-color: var(--color-dark);
+    color: var(--color-dark-blue);
 
     &:hover {
-      background-color: var(--color-white);
-      color: var(--color-green);
+      background-color: var(--color-dark-blue);
+      color: var(--color-white);
     }
+  }
+
+  &:hover {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
   }
 }

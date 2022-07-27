@@ -38,10 +38,6 @@ body {
   color: var(--color-white);
   font-family: var(--main-ff);
   background-color: var(--color-bg);
-
-  &._rus {
-    background: radial-gradient(187.6% 187.6% at 50% 50%, #52A863 0%, #000000 100%);
-  }
 }
 
 ul,
@@ -141,6 +137,10 @@ a {
   text-decoration: none;
   transition: color 0.2s;
   color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 svg {
@@ -187,13 +187,9 @@ select:-webkit-autofill:focus {
 
 .site-container {
   width: 100%;
-  max-width: 1470px;
+  max-width: 1260px;
   margin: 0 auto;
-  padding: 0 15px;
-
-  @include mq(custom, min, 1999) {
-    max-width: 100%;
-  }
+  padding: 0 30px;
 }
 
 .page-wrapper {
@@ -201,14 +197,6 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
-  background-image: url(../images/bg-layer.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  &._rus {
-    background-image: none;
-  }
 }
 
 .page-main {
@@ -224,12 +212,4 @@ select:-webkit-autofill:focus {
   left: 0;
   top: 0;
   width: 100%;
-}
-
-.js-focus-visible button:focus:not(.focus-visible) {
-  box-shadow: none;
-}
-
-button:focus {
-  box-shadow: 0 0 0 10px red;
 }

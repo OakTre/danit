@@ -1,17 +1,29 @@
 @font-face {
-  font-weight: 500;
-  font-family: "Roboto";
+  font-weight: 700;
+  font-family: "ArtegraSans";
   font-style: normal;
   font-display: swap;
   src:
-    url("../fonts/ArtegraSansExMedium.woff2") format("woff2");
+    url("../fonts/ArtegraSansExBold.woff2") format("woff2"),
+    url("../fonts/ArtegraSansExBold.woff") format("woff");
 }
 
 @font-face {
-  font-weight: 700;
-  font-family: "Roboto";
+  font-weight: 400;
+  font-family: "ArtegraSans";
   font-style: normal;
   font-display: swap;
   src:
-    url("../fonts/ArtegraSansExBold.woff2") format("woff2");
+    url("../fonts/ArtegraSansExRegular.woff2") format("woff2"),
+    url("../fonts/ArtegraSansExRegular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 200;
+  font-family: "ArtegraSans";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ArtegraSansExThin.woff2") format("woff2"),
+    url("../fonts/ArtegraSansExThin.woff") format("woff");
 }
