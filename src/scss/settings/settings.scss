@@ -190,6 +190,11 @@ select:-webkit-autofill:focus {
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 30px;
+
+  @include mq(sm) {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 }
 
 .page-wrapper {

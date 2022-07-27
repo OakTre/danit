@@ -19,7 +19,9 @@
   --font-xxs: 400 1.2rem/1.7rem var(--main-ff);
 
   // etc
-  --transition: 200ms
+  --transition: 200ms;
+  --header-height: 11.9rem;
+  --grid-gap: 3.2rem;
 }
 
 @import "./helpers/**/*";
@@ -27,3 +29,11 @@
 @import "./settings/**/*";
 @import "./UI/**/*";
 @import './pages/**/*';
+
+
+@include mq(sm) {
+  :root {
+    --header-height: 6.9rem;
+    --grid-gap: 2.4rem;
+  }
+}
