@@ -1,0 +1,44 @@
+section.contact-us(id="contactUs")
+  .site-container.contact-us__container.js-anim-fade-out(data-intersection-ratio="0")
+    .site-heading.contact-us__heading
+      h2 Contact Us
+    .contact-us__grid-container
+      ._block
+        form.contact-us__form.form(data-need-validation)
+          h3.form__heading Feedback form
+          .form__inpts-container
+            label.form__inpt-container
+              input.form__input(type="text" name="name" placeholder="Name" data-parsley-required)
+            label.form__inpt-container
+              input.form__input(type="text" name="company" placeholder="Company")
+            label.form__inpt-container
+              input.form__input(type="number" name="phone" placeholder="Phone" data-parsley-required)
+            label.form__inpt-container
+              input.form__input(type="email" name="e-mail" placeholder="E-mail" data-parsley-required)
+            label.form__inpt-container
+              input.form__input(type="mail" name="inquiry" placeholder="Inquiry")
+          button.button.mod-white.form__btn Send
+          p.form__argeement
+            | By clicking the send request button you agree to #[a(href="/") our privacy] policy terms
+        a(href="/" class="contact-us__know-more _mobile")
+          span.contact-us__know-more-text Know more about IT-&nbsp;solutions in agriculture
+          span.contact-us__know-more-icon
+      ._block
+        .contact-us__item
+          span.contact-us__legend Want to know more about BI in agriculture?
+          a(href="mailto:info@danit.ae" class="contact-us__link") info@danit.ae
+        .contact-us__item
+          span.contact-us__legend Foreign Trade Manager
+          span.contact-us__legend._green Svetlana Zorina
+          a(href="tel:+971509339531" class="contact-us__link") +971 50 9339531
+          a(href="mailto:Svetlana.z@danit.ae" class="contact-us__link") Svetlana.z@danit.ae
+        ul.socials.contact-us__socials
+          li.socials__item
+            a.socials__link(href="/")
+              +icon-mono("in")(width="32" height="32" class="socials__link-icon")
+          li.socials__item
+            a.socials__link(href="/")
+              +icon-mono("wa")(width="32" height="32" class="socials__link-icon")
+        a(href="/" class="contact-us__know-more")
+          span.contact-us__know-more-text Know more about IT-&nbsp;solutions in agriculture
+          span.contact-us__know-more-icon

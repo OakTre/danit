@@ -1,0 +1,39 @@
+section.about.section(id="danit")
+  .about__mobile-content.site-container
+    h2 DANIT
+    p More than #[span 50 years] of working with agricultural and food producers
+    p Work with #[span XX+] companies
+  .about__inner
+    .about__container
+      .about__container-block
+      .about__container-block.lazyload(data-bg="assets/images/about/about-bg-lines.svg")
+    .site-container.js-anim-fade-out(data-intersection-ratio="-1")
+      .about__content
+        ._block
+          h2 DANIT
+          p More than #[span 50 years] of working with agricultural and food producers
+          p Work with #[span XX+] companies
+        ._block
+      .about__slider
+        ._block
+          h2.about__slider-heading What we do:
+          .swiper.about__slider-slider.js-about-slider
+            .swiper-wrapper
+              .swiper-slide.about__slider-item
+                p Build strong partnership in agriculture and food
+              .swiper-slide.about__slider-item
+                p Import of best agricultural products to UAE and Middle East
+              .swiper-slide.about__slider-item
+                p IT - support
+          .slider-nav.about__slider-nav
+            button.slider-nav__btn._left.js-about-btn-prev
+              +icon-mono("arrow-right")(class="slider-nav__btn-icon" width="32" height="16")
+            .js-about-slider-pagination.slider-nav__pagination
+            button.slider-nav__btn._right.js-about-btn-next
+              +icon-mono("arrow-right")(class="slider-nav__btn-icon" width="32" height="16")
+        ._block
+          .swiper.about__slider-img.js-about-slider2
+            .swiper-wrapper
+              .swiper-slide.about__slider-img-wrapper.lazyload(data-bg="assets/images/about/img.jpg")
+              .swiper-slide.about__slider-img-wrapper.lazyload(data-bg="assets/images/about/img1.jpg")
+              .swiper-slide.about__slider-img-wrapper.lazyload(data-bg="assets/images/about/img2.jpg")

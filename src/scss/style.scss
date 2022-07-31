@@ -22,6 +22,7 @@
   --transition: 200ms;
   --header-height: 11.9rem;
   --grid-gap: 3.2rem;
+  --content-offset: 30px;
 }
 
 @import "./helpers/**/*";
@@ -35,5 +36,12 @@
   :root {
     --header-height: 6.9rem;
     --grid-gap: 2.4rem;
+    --content-offset: 22px;
+  }
+}
+
+@include mq(custom, max, 360) {
+  :root {
+    --content-offset: 16px;
   }
 }

@@ -1,0 +1,59 @@
+.slider-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28.2rem;
+
+  &__btn {
+    width: 8.9rem;
+    height: 3.5rem;
+    background-color: var(--color-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition);
+    clip-path: polygon(0 0, 100% 0%, 93% 100%, 0% 100%);
+    flex-shrink: 0;
+
+    &._left {
+      transform: scale(-1, 1);
+    }
+
+    &:hover {
+      background-color: var(--color-dark-blue);
+    }
+  }
+
+  &__btn-icon {
+    color: var(--color-white);
+    width: 3.2rem;
+    height: 1.6rem;
+  }
+
+  &__pagination {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 1.1rem;
+
+    .swiper-pagination-bullet {
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--color-white);
+      margin: 0 !important;
+      opacity: 1;
+      border-radius: 0;
+      clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+
+      &.swiper-pagination-bullet-active {
+        background-color: var(--color-green);
+      }
+    }
+  }
+}

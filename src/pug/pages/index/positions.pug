@@ -1,0 +1,32 @@
+-
+  const posList = [
+    "Crop production",
+    "Animal nutrition",
+    "Food products",
+    "Other",
+  ]
+
+section.positions.js-anim-fade-out(id="import" data-intersection-ratio="0")
+  .site-container.positions__container
+    .site-heading._dark.positions__heading
+      h2 Import position
+    .positions__list
+      for item in posList
+        .positions__item(data-heading=item)
+          img.lazyload(data-src="assets/images/positions/img1.jpg" src="#" alt=item)
+          .positions__item-content
+            h4 Crop production
+            .positions__item-content-text
+              p Grains and seeds
+              p Oilseeds
+              p Legumes
+    .positions__content
+      ._block
+        p
+          | Do you supply agricultural and food products to farms, shops, restaurants, hotels etc.?
+        p
+          | Or are you interested in general trading?
+      ._block
+        p
+          | #[strong #[span We are ready to any request]]
+        a.button.positions__btn(href="#contactUs") Fill the request

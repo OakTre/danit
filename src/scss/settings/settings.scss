@@ -10,19 +10,19 @@ html {
   line-height: 1.2;
 
   @include mq(custom, min, 1999) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   @include mq(custom, max, 1536) {
-    font-size: 8px;
+    font-size: 9px;
   }
 
   @include mq(custom, max, 1366) {
-    font-size: 7px;
+    font-size: 8px;
   }
 
   @include mq(custom, max, 992) {
-    font-size: 6px;
+    font-size: 7px;
   }
 
   @include mq(sm) {
@@ -189,11 +189,14 @@ select:-webkit-autofill:focus {
   width: 100%;
   max-width: 1260px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 var(--content-offset);
 
-  @include mq(sm) {
-    padding-left: 22px;
-    padding-right: 22px;
+  @include mq(custom, min, 1999) {
+    max-width: 1920px;
+  }
+
+  @include mq(custom, min, 1680) {
+    max-width: 1440px;
   }
 }
 
@@ -217,4 +220,49 @@ select:-webkit-autofill:focus {
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.section {
+  margin-bottom: 12.2rem;
+
+  @include mq(sm) {
+    margin-bottom: 6rem;
+  }
+}
+
+.site-heading {
+  font: var(--font-xl);
+
+  &._dark {
+    color: var(--color-dark-blue);
+  }
+
+  @include mq(sm) {
+    font: var(--font-l);
+    font-weight: 700;
+  }
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+
+.js-anim-fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5rem);
+}
+
+.fade-out {
+  opacity: 1;
+  visibility: inherit;
+  transition: opacity .4s, visibility .4s, transform .4s ease-out;
+  transform: translateY(0);
 }

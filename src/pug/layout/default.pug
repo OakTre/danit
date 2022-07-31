@@ -8,6 +8,7 @@ html(lang=siteLang)
   head
     include ../parts/head.pug
   body(class=bodyClass)
+    include ../parts/menu.pug
     .page-wrapper
       block header
         include ../parts/header.pug
@@ -21,5 +22,5 @@ html(lang=siteLang)
     //-   include ../parts/modals/modal.pug
 
   block scripts
-    //- script(src="assets/js/main.js?v=" + siteVersion)
-    //- script(src="assets/js/backend.js?v=" + siteVersion)
+    script(src="assets/js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

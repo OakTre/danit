@@ -1,5 +1,6 @@
 .footer {
   padding-bottom: 5.6rem;
+  background-color: var(--color-grey);
 
   @include mq(sm) {
     padding-bottom: 6rem;
