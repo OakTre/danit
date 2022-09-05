@@ -7,6 +7,9 @@ import menu from './modules/menu';
 import anchorLinks from './modules/anchorLInks';
 import blocksReveal from './modules/animatedBlocks';
 import validation from './modules/validation';
+import weTakeCare from './modules/weTakeCare';
+import delivery from './modules/delivery';
+import geoSlider from './modules/geoSlider';
 
 documenReady(() => {
   lazyIMages();
@@ -15,4 +18,7 @@ documenReady(() => {
   anchorLinks();
   blocksReveal();
   validation();
+  weTakeCare();
+  delivery();
+  geoSlider();
 });

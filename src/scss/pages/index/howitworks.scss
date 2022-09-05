@@ -1,9 +1,12 @@
 .howitworks {
   position: relative;
   z-index: 1;
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-grey);
+  color: var(--color-dark-blue);
 
   @include mq(md) {
+    color: var(--color-white);
+
     &::before {
       position: absolute;
       top: 0;
@@ -84,6 +87,7 @@
 
   &__heading {
     margin-bottom: 5.8rem;
+    display: inline-block;
   }
 
   &__content {
@@ -99,10 +103,11 @@
       counter-reset: section;
 
       li {
-        border-top: 4px solid #2B3D4A;
-        padding-top: 1.7rem;
-        padding-bottom: 5rem;
+        position: relative;
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
         display: flex;
+        align-items: center;
         justify-content: space-between;
 
         @include mq(sm) {
@@ -127,13 +132,38 @@
           }
         }
 
+        &:nth-child(odd) {
+          &::before {
+            color: transparent;
+            -webkit-text-stroke: 2px var(--color-green);
+          }
+        }
+
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0.4rem;
+          background: linear-gradient(90deg, #52A863 0%, #25ACE3 105.12%);
+          content: "";
+        }
+
         &::before {
-          font: 200 6.4rem/1 var(--main-ff);
+          font: 700 5rem/7.6rem var(--main-ff);
           color: var(--color-green);
           counter-increment: section;
-          content: "0"counter(section);
+          content: "0"counter(section) '/';
         }
       }
+    }
+  }
+
+  &__btn {
+    margin-top: 3.7rem;
+
+    @include mq(sm) {
+      display: none;
     }
   }
 }

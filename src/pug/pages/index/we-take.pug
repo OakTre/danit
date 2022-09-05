@@ -1,0 +1,23 @@
+-
+  const items = [
+    "Подбор поставщиков",
+    "Переговоры по подвору лучших цен",
+    "Логистика товаров",
+    "Таможенное оформление",
+    "Ввоз санкционных товаров"
+  ]
+
+section.we-take
+  .site-container.js-anim-fade-out
+    h2.we-take__heading.site-heading._dark.site-line Мы возьмём на себя
+    .we-take__nav-container
+      button.nav-btn.we-take-nav-prev
+        +icon-mono("arrow-right")(width="32" height="16")
+      button.nav-btn.we-take-nav-next
+        +icon-mono("arrow-right")(width="32" height="16")
+    .we-take__container.swiper.js-wetake-slider
+      .swiper-wrapper
+        for item in items
+          .we-take__item.swiper-slide
+            img(src="assets/images/we-take/img.svg" alt="")
+            h3.we-take__legend= item

@@ -1,0 +1,23 @@
+section.delivery.section
+  .site-container.js-anim-fade-out(data-intersection-ratio="-0.1")
+    h2.delivery__heading.site-heading._dark.site-line Привезём вам
+    .delivery__container
+      .nav-container.delivery__nav-container
+        button.nav-btn.delivery-nav-prev
+          +icon-mono("arrow-right")(width="32" height="16")
+        button.nav-btn.delivery-nav-next
+          +icon-mono("arrow-right")(width="32" height="16")
+      .delivery__container-slider.swiper.js-delivery-slide
+        .swiper-wrapper
+          each i in Array.from(Array(5).keys())
+            .delivery__item.swiper-slide
+              .delivery__intro.lazyload(data-bg="assets/images/delivery/img1.jpg")
+                h3.delivery__legend Запчасти для сельскохозяйственной техники
+              .delivery__info
+                h3 Запчасти для сельскохозяйственной техники
+                ul
+                  li MAN
+                  li Scania
+                  li Mercedes Benz
+                  li Volvo
+                li и другие

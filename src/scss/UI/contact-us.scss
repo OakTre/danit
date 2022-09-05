@@ -6,7 +6,6 @@
   }
 
   &__heading {
-    color: var(--color-green);
     margin-bottom: 4.5rem;
 
     @include mq(sm) {
@@ -88,18 +87,92 @@
     }
   }
 
+  &__know-more-wrapper {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+
+    &._mobile {
+      display: none;
+    }
+
+    @include mq(sm) {
+      display: none;
+
+      &._mobile {
+        display: flex;
+        margin-top: 4rem;
+
+        .contact-us__know-more {
+          display: block;
+
+          &:nth-child(2) {
+            margin-left: 2.4rem;
+
+            &::before {
+              transform: rotate(11.4deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
   &__know-more {
     display: inline-block;
     text-align: center;
     color: var(--color-white);
-    padding: 3.1rem 2.9rem;
+    padding: 1rem 2.1rem;
     background-color: var(--color-green);
     align-self: flex-start;
-    clip-path: polygon(0 0, 100% 0%, 93% 100%, 0% 100%);
-    margin-top: auto;
-
     &._mobile {
       display: none;
+    }
+
+    &:nth-child(1) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+
+      .contact-us__know-more-text {
+        text-align: right;
+      }
+
+      .contact-us__know-more-icon {
+        transform: scale(-1, 1);
+      }
+    }
+
+    &:nth-child(2) {
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%);
+      background-color: var(--color-white);
+      border: 1px solid var(--color-green);
+      color: var(--color-dark-blue);
+      margin-left: 3.2rem;
+      border-right: none;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform-origin: top;
+        height: 8rem;
+        width: 0.1rem;
+        transform: rotate(9.4deg);
+        background-color: var(--color-green);
+        content: "";
+      }
+
+      .contact-us__know-more-text {
+        text-align: left;
+      }
+
+      .contact-us__know-more-icon {
+        background-color: var(--color-green);
+
+        &::before {
+          border-color: transparent transparent transparent var(--color-green);
+        }
+      }
     }
 
     @include mq(sm) {
@@ -116,10 +189,11 @@
 
   &__know-more-text {
     display: block;
-    max-width: 23.1rem;
+    max-width: 13.9rem;
 
     @include mq(sm) {
       max-width: 100%;
+      font: var(--font-xxs);
     }
   }
 

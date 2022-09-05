@@ -1,6 +1,6 @@
 section.contact-us(id="contactUs")
   .site-container.contact-us__container.js-anim-fade-out(data-intersection-ratio="0")
-    .site-heading.contact-us__heading
+    .site-heading.contact-us__heading._dark
       h2 Контакты
     .contact-us__grid-container
       ._block
@@ -18,9 +18,13 @@ section.contact-us(id="contactUs")
           button.button.mod-white.form__btn Отправить
           p.form__argeement
             | * Нажимая на кнопку отправить запрос, вы соглашаетесь с нашими условиями #[a(href="/") политики конфиденциальности]
-        a(href="/" class="contact-us__know-more _mobile")
-          span.contact-us__know-more-text Стать экспортером
-          span.contact-us__know-more-icon
+        .contact-us__know-more-wrapper._mobile
+          a(href="/" class="contact-us__know-more")
+            span.contact-us__know-more-text Стать экспортером
+            span.contact-us__know-more-icon
+          a(href="/" class="contact-us__know-more")
+            span.contact-us__know-more-text IT в сельском хозяйстве
+            span.contact-us__know-more-icon
       ._block
         .contact-us__item
           span.contact-us__legend Узнать больше о&nbsp;наших услугах
@@ -38,6 +42,10 @@ section.contact-us(id="contactUs")
           li.socials__item
             a.socials__link(href="/")
               +icon-mono("wa")(width="32" height="32" class="socials__link-icon")
-        a(href="/" class="contact-us__know-more")
-          span.contact-us__know-more-text Стать экспортером
-          span.contact-us__know-more-icon
+        .contact-us__know-more-wrapper
+          a(href="/" class="contact-us__know-more")
+            span.contact-us__know-more-text Стать экспортером
+            span.contact-us__know-more-icon
+          a(href="/" class="contact-us__know-more")
+            span.contact-us__know-more-text IT в сельском хозяйстве
+            span.contact-us__know-more-icon

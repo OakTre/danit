@@ -15,6 +15,7 @@
   @include mq(sm) {
     padding-top: calc(var(--header-height) + 6rem);
     padding-bottom: 8.5rem;
+    min-height: 56.8rem;
   }
 
   &__heading {
@@ -34,9 +35,26 @@
       background-color: var(--color-green);
       content: "";
     }
+
+    @include mq(sm) {
+      font: var(--font-m-3);
+      max-width: 25.3rem;
+      margin-bottom: 14.5rem;
+      padding-left: 1.8rem;
+
+      &::before {
+        top: 0.8rem;
+        width: 0.4rem;
+      }
+    }
   }
 
   &__btn {
     padding: 1.7rem 9rem;
+
+    @include mq(sm) {
+      padding: 1rem 4.7rem;
+      text-align: center;
+    }
   }
 }

@@ -6,6 +6,15 @@
   padding-bottom: 18.8rem;
   color: var(--color-dark-blue);
 
+  @include mq(md) {
+    color: var(--color-white);
+  }
+
+  @include mq(sm) {
+    padding-top: 4rem;
+    padding-bottom: 11rem;
+  }
+
   &__container {
     position: absolute;
     top: 0;
@@ -87,6 +96,14 @@
       transform: translateY(-50%);
       content: "";
     }
+
+    @include mq(md) {
+      color: var(--color-white) !important;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 3.7rem;
+    }
   }
 
   &__text {
@@ -112,5 +129,25 @@
         margin-bottom: 0;
       }
     }
+
+    @include mq(sm) {
+      font: var(--font-xxs);
+      padding-left: 1.4rem;
+      margin-bottom: 12.5rem;
+
+      &::before {
+        width: 0.3rem;
+        top: 0.4rem;
+      }
+
+      p {
+        margin-bottom: 2.2rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 1rem 4.5rem;
   }
 }
