@@ -10,6 +10,7 @@ import validation from './modules/validation';
 import weTakeCare from './modules/weTakeCare';
 import delivery from './modules/delivery';
 import geoSlider from './modules/geoSlider';
+import companiesSlider from './modules/companiesSlider';
 
 documenReady(() => {
   lazyIMages();
@@ -21,4 +22,5 @@ documenReady(() => {
   weTakeCare();
   delivery();
   geoSlider();
+  companiesSlider();
 });

@@ -333,3 +333,7 @@ select:-webkit-autofill:focus {
     color: var(--color-white);
   }
 }
+
+.swiper-linear .swiper-wrapper {
+  transition-timing-function: linear;
+}

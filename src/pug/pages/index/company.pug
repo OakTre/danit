@@ -1,0 +1,14 @@
+section.companies.mb
+  .site-container
+    .swiper.companies__container.js-companies-slider.swiper-linear
+      .swiper-wrapper
+        each i in Array.from(Array(10).keys())
+          .companies__item.swiper-slide
+            img(src="assets/images/companies/img1.jpg" alt="")
+section.companies.section
+  .site-container
+    .swiper.companies__container.js-companies-slider2.swiper-linear(dir="rtl")
+      .swiper-wrapper
+        each i in Array.from(Array(10).keys())
+          .companies__item.swiper-slide
+            img(src="assets/images/companies/img1.jpg" alt="")
