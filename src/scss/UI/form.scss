@@ -46,6 +46,14 @@
     color: var(--color-white);
     font: var(--font-xs);
 
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
     @include placeholder() {
       color: rgba($color: #fff, $alpha: 0.3);
       font: var(--font-xs);

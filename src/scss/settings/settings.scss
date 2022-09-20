@@ -96,6 +96,14 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;/*For FireFox*/
+
+  &::-webkit-inner-spin-button { /*For Webkits like Chrome and Safari*/
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
 input[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
