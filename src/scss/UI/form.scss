@@ -71,6 +71,7 @@
       text-align: center;
       display: block;
       align-self: stretch;
+      clip-path: polygon(0 0, 100% 0%, 97% 100%, 0% 100%);
     }
   }
 
@@ -81,6 +82,10 @@
 
     a {
       font-weight: 700;
+    }
+
+    @include mq(sm) {
+      font: 400 1rem/1.2rem var(--main-ff);
     }
   }
 }

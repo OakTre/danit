@@ -28,39 +28,27 @@ export default () => {
         sliderInstance.slideTo(index);
 
         if (index === 2) {
-          flag.style.left = thumbs[index].offsetLeft / 10 + 1 + 'rem';
+          flag.style.left = thumbs[index].offsetLeft + 1 + 'px';
         } else {
-          flag.style.left = thumbs[index].offsetLeft / 10 + 1 + 'rem';
+          flag.style.left = thumbs[index].offsetLeft + 1 + 'px';
         }
       });
     });
 
     sliderInstance.on("slideChange", (swiper) => {
-      flag.style.left = thumbs[swiper.activeIndex].offsetLeft / 10 + 1 + 'rem';
+      flag.style.left = thumbs[swiper.activeIndex].offsetLeft + 1 + 'px';
     });
   } else {
     btns.forEach((btn, index) => {
       btn.addEventListener("mouseenter", () => {
         sliderInstance.slideTo(index);
 
-        flag.style.top = thumbs[index].offsetTop / 10 + 0.5 + 'rem';
-      });
-    });
-
-    btns.forEach((btn, index) => {
-      btn.addEventListener("click", () => {
-        sliderInstance.slideTo(index);
-
-        if (index === 2) {
-          flag.style.top = thumbs[index].offsetTop / 10 + 4.2 + 'rem';
-        } else {
-          flag.style.top = thumbs[index].offsetTop / 10 + 0.5 + 'rem';
-        }
+        flag.style.top = thumbs[index].offsetTop + 5 + 'px';
       });
     });
 
     sliderInstance.on("slideChange", (swiper) => {
-      flag.style.top = thumbs[swiper.activeIndex].offsetTop / 10 + 0.5 + 'rem';
+      flag.style.top = thumbs[swiper.activeIndex].offsetTop + 5 + 'px';
     });
   }
 };
